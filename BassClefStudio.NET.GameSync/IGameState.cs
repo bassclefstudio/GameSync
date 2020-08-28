@@ -17,6 +17,9 @@ namespace BassClefStudio.NET.GameSync
 
     public static class GameStateExtensions
     {
+        /// <summary>
+        /// Creates a shallow copy of a <typeparamref name="T"/> game state, which can be used to save the current game.
+        /// </summary>
         public static T Copy<T>(this T state) where T : IGameState
         {
             var copy = state.Copy();
