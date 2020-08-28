@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BassClefStudio.NET.GameSync", "BassClefStudio.NET.GameSync\BassClefStudio.NET.GameSync.csproj", "{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DD107B7-00C9-47BD-8AEE-6863DF23841E}
+	EndGlobalSection
+EndGlobal
