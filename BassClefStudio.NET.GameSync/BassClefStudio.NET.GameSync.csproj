@@ -5,6 +5,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>A .NET Standard library for managing the synchronization of a turn-based game.</Description>
     <RepositoryUrl>https://github.com/bassclefstudio/GameSync.git</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
