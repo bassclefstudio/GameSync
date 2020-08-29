@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BassClefStudio.NET.GameSync.Commits;
+using BassClefStudio.NET.GameSync.State;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
