@@ -20,11 +20,17 @@ namespace BassClefStudio.NET.GameSync.Commits
         public string Name { get; }
 
         /// <summary>
+        /// The <see cref="PlayerType"/> value that provides information about what the <see cref="Player"/> is and what it can do.
+        /// </summary>
+        public PlayerType Type { get; }
+
+        /// <summary>
         /// Creates a new <see cref="Player"/> from their unique <see cref="Guid"/> and display name.
         /// </summary>
         /// <param name="id">The id of the <see cref="Player"/>.</param>
         /// <param name="name">The <see cref="Player"/>'s display name.</param>
-        public Player(Guid id, string name)
+        /// <param name="type">The <see cref="PlayerType"/> value that provides information about what the <see cref="Player"/> is and what it can do.</param>
+        public Player(Guid id, string name, PlayerType type = PlayerType.Human)
         {
             Id = id;
             Name = name;
