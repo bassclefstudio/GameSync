@@ -12,9 +12,9 @@ namespace BassClefStudio.NET.GameSync.Commits
     public interface IGameAction<in T> where T : GameState
     {
         /// <summary>
-        /// The <see cref="Player"/> that has signed and performed this <see cref="IGameAction{T}"/>.
+        /// The <see cref="Guid"/> ID of the <see cref="Player"/> that has signed and performed this <see cref="IGameAction{T}"/>.
         /// </summary>
-        Player SigningPlayer { get; }
+        Guid SigningPlayerId { get; }
 
         /// <summary>
         /// Returns a <see cref="bool"/> indicating whether the changes defined in the <see cref="IGameAction{T}"/> can be made to the given <typeparamref name="T"/>.

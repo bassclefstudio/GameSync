@@ -13,12 +13,17 @@ namespace BassClefStudio.NET.GameSync.Actions
     public class AddPlayerAction : IGameAction<GameState>
     {
         /// <inheritdoc/>
+        public Guid SigningPlayerId => SigningPlayer.Id;
+
+        /// <summary>
+        /// The <see cref="Player"/> to add to the game.
+        /// </summary>
         public Player SigningPlayer { get; }
 
         /// <summary>
         /// Creates a new <see cref="AddPlayerAction"/>.
         /// </summary>
-        /// <param name="signingPlayer">The <see cref="Player"/> who signed the <see cref="IGameAction{T}"/> and who will be added to the <see cref="GameState"/>.</param>
+        /// <param name="signingPlayer">The <see cref="Player"/> to add to the game.</param>
         public AddPlayerAction(Player signingPlayer)
         {
             SigningPlayer = signingPlayer;
