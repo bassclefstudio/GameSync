@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BassClefStudio.NET.GameSync.State;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BassClefStudio.NET.GameSync
+namespace BassClefStudio.NET.GameSync.Commits
 {
     /// <summary>
     /// Represents a group of <see cref="IGameAction{T}"/>s sent between game clients.

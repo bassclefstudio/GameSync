@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace BassClefStudio.NET.GameSync
+namespace BassClefStudio.NET.GameSync.State
 {
     /// <summary>
     /// Represents a service that can make save copies of a <typeparamref name="T"/> game state.

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BassClefStudio.NET.GameSync.State;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BassClefStudio.NET.GameSync
+namespace BassClefStudio.NET.GameSync.Commits
 {
     /// <summary>
     /// Represents an action that changes the state of an <see cref="IGameState"/>.
@@ -10,9 +11,9 @@ namespace BassClefStudio.NET.GameSync
     public interface IGameAction<in T> where T : IGameState
     {
         /// <summary>
-        /// The unique identifier of this change, used for synchronization.
+        /// The <see cref="Player"/> that has signed and performed this <see cref="IGameAction{T}"/>.
         /// </summary>
-        Guid Id { get; }
+        Player SigningPlayer { get; }
 
         /// <summary>
         /// Returns a <see cref="bool"/> indicating whether the changes defined in the <see cref="IGameAction{T}"/> can be made to the given <typeparamref name="T"/>.
