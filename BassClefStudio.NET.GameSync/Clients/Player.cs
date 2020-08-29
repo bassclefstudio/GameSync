@@ -1,4 +1,5 @@
 ﻿using BassClefStudio.NET.GameSync.Commits;
+using BassClefStudio.NET.GameSync.Id;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,11 +9,9 @@ namespace BassClefStudio.NET.GameSync.Clients
     /// <summary>
     /// Represents a client or individual on a shared client (for example, an AI on a device that also has a human player) that can create and sign <see cref="IGameCommit{T}"/>.
     /// </summary>
-    public class Player
+    public class Player : IIdentifiable
     {
-        /// <summary>
-        /// A unique <see cref="Guid"/> id that can identify the <see cref="Player"/> to other clients.
-        /// </summary>
+        /// <inheritdoc/>
         public Guid Id { get; }
 
         /// <summary>
