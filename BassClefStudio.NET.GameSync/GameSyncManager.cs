@@ -11,8 +11,8 @@ namespace BassClefStudio.NET.GameSync
     /// <summary>
     /// Represents a service that manages change-based synchronization of a turn-based game.
     /// </summary>
-    /// <typeparam name="T">The type of <see cref="IGameState"/> that this service synchronizes.</typeparam>
-    public class GameSyncManager<T> where T : IGameState
+    /// <typeparam name="T">The type of <see cref="State.GameState"/> that this service synchronizes.</typeparam>
+    public class GameSyncManager<T> where T : GameState
     {
         /// <summary>
         /// The current <typeparamref name="T"/> state.
@@ -72,7 +72,7 @@ namespace BassClefStudio.NET.GameSync
         }
 
         /// <summary>
-        /// Applies an <see cref="IGameCommit{T}"/> to the current <see cref="IGameState"/>.
+        /// Applies an <see cref="IGameCommit{T}"/> to the current <see cref="State.GameState"/>.
         /// </summary>
         /// <param name="commit">The received <see cref="IGameCommit{T}"/> containing <see cref="IGameAction{T}"/>s to apply.</param>
         public void ApplyCommit(IGameCommit<T> commit)
@@ -88,7 +88,7 @@ namespace BassClefStudio.NET.GameSync
         }
 
         /// <summary>
-        /// Resets all <see cref="IGameAction{T}"/>s with a new collection of <see cref="IGameState"/>s and rebuilds the game state (equivalent to calling <see cref="RebuildGameState"/>).
+        /// Resets all <see cref="IGameAction{T}"/>s with a new collection of <see cref="State.GameState"/>s and rebuilds the game state (equivalent to calling <see cref="RebuildGameState"/>).
         /// </summary>
         /// <param name="updatedActions">The new full list of <see cref="IGameAction{T}"/>s.</param>
         public void ReplaceActions(IEnumerable<IGameAction<T>> updatedActions)
@@ -100,7 +100,7 @@ namespace BassClefStudio.NET.GameSync
         }
 
         /// <summary>
-        /// Reconstructs the <see cref="IGameState"/> from the initial <see cref="IGameState"/> provided to the <see cref="GameSyncManager{T}"/> and the existing collection <see cref="Actions"/>.
+        /// Reconstructs the <see cref="State.GameState"/> from the initial <see cref="State.GameState"/> provided to the <see cref="GameSyncManager{T}"/> and the existing collection <see cref="Actions"/>.
         /// </summary>
         public void RebuildGameState()
         {

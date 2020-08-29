@@ -1,8 +1,9 @@
-﻿using System;
+﻿using BassClefStudio.NET.GameSync.Commits;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BassClefStudio.NET.GameSync.Commits
+namespace BassClefStudio.NET.GameSync.Clients
 {
     /// <summary>
     /// Represents a client or individual on a shared client (for example, an AI on a device that also has a human player) that can create and sign <see cref="IGameCommit{T}"/>.
@@ -40,7 +41,6 @@ namespace BassClefStudio.NET.GameSync.Commits
     /// <summary>
     /// An enum indicating the features that a <see cref="Player"/> supports.
     /// </summary>
-    [Flags]
     public enum PlayerType
     { 
         /// <summary>

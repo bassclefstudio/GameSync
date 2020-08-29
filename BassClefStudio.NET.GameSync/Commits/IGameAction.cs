@@ -1,4 +1,5 @@
-﻿using BassClefStudio.NET.GameSync.State;
+﻿using BassClefStudio.NET.GameSync.Clients;
+using BassClefStudio.NET.GameSync.State;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Text;
 namespace BassClefStudio.NET.GameSync.Commits
 {
     /// <summary>
-    /// Represents an action that changes the state of an <see cref="IGameState"/>.
+    /// Represents an action that changes the state of an <see cref="GameState"/>.
     /// </summary>
-    public interface IGameAction<in T> where T : IGameState
+    public interface IGameAction<in T> where T : GameState
     {
         /// <summary>
         /// The <see cref="Player"/> that has signed and performed this <see cref="IGameAction{T}"/>.

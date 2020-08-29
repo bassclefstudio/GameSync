@@ -8,8 +8,8 @@ namespace BassClefStudio.NET.GameSync.Commits
     /// <summary>
     /// Represents a group of <see cref="IGameAction{T}"/>s sent between game clients.
     /// </summary>
-    /// <typeparam name="T">The type of <see cref="IGameState"/> that this collection of <see cref="IGameAction{T}"/>s acts on.</typeparam>
-    public interface IGameCommit<in T> where T : IGameState
+    /// <typeparam name="T">The type of <see cref="GameState"/> that this collection of <see cref="IGameAction{T}"/>s acts on.</typeparam>
+    public interface IGameCommit<in T> where T : GameState
     {
         /// <summary>
         /// Returns the transported <see cref="IEnumerable{T}"/> of <see cref="IGameAction{T}"/>.
@@ -20,8 +20,8 @@ namespace BassClefStudio.NET.GameSync.Commits
     /// <summary>
     /// Represents a basic <see cref="IGameCommit{T}"/> created by this client from a collection of <see cref="IGameAction{T}"/>s.
     /// </summary>
-    /// <typeparam name="T">The type of <see cref="IGameState"/> that this collection of <see cref="IGameAction{T}"/>s acts on.</typeparam>
-    public class GameCommit<T> : IGameCommit<T> where T : IGameState
+    /// <typeparam name="T">The type of <see cref="GameState"/> that this collection of <see cref="IGameAction{T}"/>s acts on.</typeparam>
+    public class GameCommit<T> : IGameCommit<T> where T : GameState
     {
         private IEnumerable<IGameAction<T>> Actions { get; }
 
