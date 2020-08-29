@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BassClefStudio.NET.GameSync", "BassClefStudio.NET.GameSync\BassClefStudio.NET.GameSync.csproj", "{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BassClefStudio.NET.GameSync.Serialization", "BassClefStudio.NET.GameSync.Serialization\BassClefStudio.NET.GameSync.Serialization.csproj", "{AF4391C1-C394-443E-9FDD-593A1630158A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23DE8BFA-415E-4F53-A0DC-E1E4FB61BCEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF4391C1-C394-443E-9FDD-593A1630158A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF4391C1-C394-443E-9FDD-593A1630158A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF4391C1-C394-443E-9FDD-593A1630158A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF4391C1-C394-443E-9FDD-593A1630158A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
