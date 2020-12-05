@@ -14,7 +14,7 @@ namespace BassClefStudio.NET.GameSync.Files
     /// <summary>
     /// An <see cref="IToJsonConverter{T}"/> for seserializing <see cref="IGameCommit{T}"/>s.
     /// </summary>
-    public class CommitToJsonConverter<T> : IToJsonConverter<IGameCommit<T>> where T : GameState
+    internal class CommitToJsonConverter<T> : IToJsonConverter<IGameCommit<T>> where T : GameState
     {
         public IEnumerable<IToJsonConverter<IGameAction<T>>> ActionConverters { get; set; }
 
@@ -33,7 +33,7 @@ namespace BassClefStudio.NET.GameSync.Files
     /// <summary>
     /// An <see cref="IFromJsonConverter{T}"/> for deserializing <see cref="IGameCommit{T}"/>s.
     /// </summary>
-    public class CommitFromJsonConverter<T> : IFromJsonConverter<IGameCommit<T>> where T : GameState
+    internal class CommitFromJsonConverter<T> : IFromJsonConverter<IGameCommit<T>> where T : GameState
     {
         public IEnumerable<IFromJsonConverter<IGameAction<T>>> ActionConverters { get; set; }
 
