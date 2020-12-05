@@ -22,9 +22,19 @@ namespace BassClefStudio.NET.GameSync.Files
         /// <summary>
         /// Creates a new <see cref="CommitConverterService{T}"/>.
         /// </summary>
-        /// <param name="assemblies">A collection of <see cref="Assembly"/> objects used for retrieving the necessary <see cref="IConverter{TFrom, TTo}"/>s for (de)serialization.</param>
-        public CommitConverterService(params Assembly[] assemblies) : base(assemblies)
+        /// <param name="assemblies">A collection of <see cref="Assembly"/> objects used for retrieving the necessary <see cref="IConverter{TFrom, TTo}"/>s for serialization and deserialization. Includes by default the core GameSync assembly and the <typeparamref name="T"/> assembly.</param>
+        public CommitConverterService(Assembly[] assemblies) : base(new Assembly[] { typeof(T).GetTypeInfo().Assembly }.Concat(assemblies).ToArray())
         { }
+
+        /// <inheritdoc/>
+        protected override void ConfigureServices(ContainerBuilder builder)
+        {
+            builder.RegisterGeneric(typeof(CommitFromJsonConverter<>))
+                .AsImplementedInterfaces();
+
+            builder.RegisterGeneric(typeof(CommitToJsonConverter<>))
+                .AsImplementedInterfaces();
+        }
 
         /// <inheritdoc/>
         public override IGameCommit<T> ReadItem(JToken input)

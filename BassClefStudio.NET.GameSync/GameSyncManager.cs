@@ -56,7 +56,7 @@ namespace BassClefStudio.NET.GameSync
         /// </summary>
         public IGameCommit<T> Commit()
         {
-            IGameCommit<T> commit = new GameCommit<T>(NewActions);
+            IGameCommit<T> commit = new GameCommit<T>(NewActions.ToArray());
             ActionsList.AddRange(NewActionsList);
             NewActionsList.Clear();
             return commit;
@@ -69,6 +69,10 @@ namespace BassClefStudio.NET.GameSync
         public void AddAction(IGameAction<T> newAction)
         {
             NewActionsList.Add(newAction);
+            if (newAction.CanUpdate(GameState))
+            {
+                newAction.Update(GameState);
+            }
         }
 
         /// <summary>
